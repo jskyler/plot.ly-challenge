@@ -20,13 +20,33 @@ d3.json("samples.json").then((importedData) => {
         orientation: "h"
     };
 
-    var data = [trace1];
+    var data1 = [trace1];
 
     var layout = {
         title: "Top 10 OTUs"
     }
 
-    Plotly.newPlot("bar", data, layout);
+    Plotly.newPlot("bar", data1, layout);
 
+    var trace2 = {
+        x: ids,
+        y: importedData.samples[0].sample_values,
+        mode: "markers",
+        
+        marker: {
+            size: importedData.samples[0].sample_values,
+            color: importedData.samples[0].otu_ids,
+            colorscale: 'Earth'}
+    };
 
+    var layout2 = {
+        xaxis: {title: "OTU ID"},
+        height: 600,
+        width: 1000
+    };
+
+    var data2 = [trace2];
+
+    Plotly.newPlot("bubble", data2, layout2);
+ 
 });
