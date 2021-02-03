@@ -63,6 +63,17 @@ function getDemos(id) {
 
         var metadata = demos.metadata;
         console.log(metadata)
+
+        var results = metadata.filter(meta => meta.id.toString() === id)[0];
+
+        var demoDetails = d3.select("#sample-metadata");
+
+        demoDetails.html("");
+
+        Object.entries(results).forEach((key) => {
+            demoDetails.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n")
+        });
+
     });
 }
 
