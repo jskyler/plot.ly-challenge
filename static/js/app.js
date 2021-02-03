@@ -1,7 +1,7 @@
 function getPlots(id) {
-
+console.log('getPlots');
     d3.json("samples.json").then((importedData) => {
-        console.log(importedData);
+        console.log('Hi' + importedData);
 
         var ids = importedData.samples[0].otu_ids;
         console.log(ids)
@@ -27,7 +27,7 @@ function getPlots(id) {
         };
 
         var data1 = [trace1];
-
+        console.log(data1);
         var layout = {
             title: "Top 10 OTUs"
         }
@@ -36,12 +36,12 @@ function getPlots(id) {
 
         var trace2 = {
             x: ids,
-            y: importedData.samples[0].sample_values,
+            y: sample_values,
             mode: "markers",
             
             marker: {
-                size: importedData.samples[0].sample_values,
-                color: importedData.samples[0].otu_ids,
+                size: sample_values,
+                color: otu_ids,
                 colorscale: 'Earth'}
         };
 
