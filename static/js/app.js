@@ -87,7 +87,7 @@ function init() {
     var dropdown = d3.select('#selDataset');
 
     d3.json("samples.json").then((data) => {
-        
+
         console.log(data)
 
         data.names.forEach(function(name) {
@@ -96,6 +96,7 @@ function init() {
 
         var startData = data.samples[0]
         console.log(data);
+        
         getPlots(startData);
         getDemos(startData);
 
