@@ -8,6 +8,7 @@ function optionChanged(index) {
 
         var panelData = data.metadata.filter(row => row.id == index);
         getDemos(panelData[0]);
+
     });
  
 }
@@ -30,7 +31,7 @@ function getDemos(plotData) {
 
 
 function getPlots(plotData) {
-console.log('getPlots');
+    console.log('getPlots');
     console.log('Hi' + plotData);
 
     var sampleValues  = plotData.sample_values.slice(0,10);
