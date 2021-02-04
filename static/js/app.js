@@ -96,7 +96,7 @@ function init() {
 
         var startData = data.samples[0]
         console.log(data);
-        
+
         getPlots(startData);
         getDemos(startData);
 
@@ -105,5 +105,6 @@ function init() {
 
     });
 }
+
 
 init();
