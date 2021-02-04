@@ -20,8 +20,8 @@ function getDemos(plotData) {
 
         demoDetails.html("");
 
-        Object.entries(plotData).forEach(([keys, value])=> {
-            demoDetails.append("h5").text(`${keys} : ${value}`)
+        Object.entries(plotData).forEach((key)=> {
+            demoDetails.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n")
         });
 
     });
@@ -71,7 +71,8 @@ console.log('getPlots');
     var layout2 = {
         xaxis: {title: "OTU ID"},
         height: 600,
-        width: 1000
+        width: 1000,
+        margin: { t: 5 }
     };
 
     Plotly.newPlot("bubble", data2, layout2);
