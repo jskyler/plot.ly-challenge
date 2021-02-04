@@ -1,4 +1,5 @@
 function optionChanged(index) {
+
     d3.json("samples.json").then(function (data) {
 
         var filteredData = data.samples.filter(row => row.id == index);
@@ -15,6 +16,7 @@ function optionChanged(index) {
 
 
 function getDemos(plotData) {
+
     d3.json("samples.json").then((demos) => {
 
         console.log(plotData)
@@ -27,6 +29,7 @@ function getDemos(plotData) {
         });
 
     });
+
 }
 
 
@@ -104,6 +107,7 @@ function init() {
         getDemos(metadata);
 
     });
+    
 }
 
 
