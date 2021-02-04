@@ -79,7 +79,6 @@ console.log('getPlots');
 }
 
 
-
 function init() {
 
     var dropdown = d3.select('#selDataset');
