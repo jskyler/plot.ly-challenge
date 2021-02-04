@@ -71,8 +71,7 @@ console.log('getPlots');
     var layout2 = {
         xaxis: {title: "OTU ID"},
         height: 600,
-        width: 1000,
-        margin: { t: 5 }
+        width: 1000
     };
 
     Plotly.newPlot("bubble", data2, layout2);
