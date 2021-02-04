@@ -27,6 +27,7 @@ function getDemos(plotData) {
     });
 }
 
+
 function getPlots(plotData) {
 console.log('getPlots');
     console.log('Hi' + plotData);
