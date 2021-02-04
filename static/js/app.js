@@ -31,7 +31,7 @@ function getDemos(plotData) {
 
 
 function getPlots(plotData) {
-    console.log('getPlots');
+
     console.log('Hi' + plotData);
 
     var sampleValues  = plotData.sample_values.slice(0,10);
@@ -87,6 +87,7 @@ function init() {
     var dropdown = d3.select('#selDataset');
 
     d3.json("samples.json").then((data) => {
+        
         console.log(data)
 
         data.names.forEach(function(name) {
