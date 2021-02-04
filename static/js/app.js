@@ -12,6 +12,7 @@ function optionChanged(index) {
  
 }
 
+
 function getDemos(plotData) {
     d3.json("samples.json").then((demos) => {
 
